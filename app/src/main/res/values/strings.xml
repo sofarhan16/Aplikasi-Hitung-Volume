@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VolumeLuasKerucut</string>
+    <string name="volumekerucut">Volume Kerucut</string>
+    <string name="luaskerucut">Luas Kerucut</string>
+    <string name="jari">Jari-jari</string>
+    <string name="tinggi">Tinggi</string>
+    <string name="hitung">Hitung</string>
+</resources>
