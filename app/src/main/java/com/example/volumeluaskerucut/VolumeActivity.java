@@ -1,5 +1,7 @@
 package com.example.volumeluaskerucut;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -32,6 +34,7 @@ private TextView thasil;
 
     @Override
     public void onClick(View v) {
+        Intent data = new Intent();
         if (v.getId() == R.id.btnhitung);
 
         String inputJari = ejari.getText().toString().trim();
@@ -61,6 +64,11 @@ private TextView thasil;
             double volume = 3.14 * jari * jari * tinggi;
             thasil.setText(String.valueOf(volume));
         }
+
+        data.setData(Uri.parse(thasil.getText().toString()));
+        setResult(RESULT_OK, data);
+
+        finish();
     }
 
     private Double toDouble(String str) {
